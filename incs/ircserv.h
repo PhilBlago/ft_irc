@@ -17,10 +17,10 @@
 
 #define SA          struct sockaddr_in
 
-#define MAX_BUFFER  4096
+#define MAX_BUFFER  1024
+#define MAX_EVENTS  5
 
 #define SERV_PWD    "irc123"
-#define SERV_HOST   "127.0.0.1"
 
 // C++ LIBRARIES
 
@@ -31,6 +31,7 @@
 // SOCKET NETWORKING LIBRARIES
 
 #include <sys/socket.h>
+#include <sys/epoll.h>
 #include <arpa/inet.h>
 #include <unistd.h>
 
