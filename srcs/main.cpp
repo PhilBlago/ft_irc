@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
     // SERVER INITIAL SETUP
 
     if ((serv_sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-        std::cerr << "Error during socket creation." << std::endl;
+        std::cerr << "Error during listening socket creation." << std::endl;
         return (-3);
     }
 
@@ -147,7 +147,7 @@ int main(int argc, char **argv) {
                     strcpy(buff_send, "Hi this is the server\n");
                     if (send(events[i].data.fd, buff_send, MAX_BUFFER, 0) < 0) {
                         std::cerr << "Error while sending data to client." << std::endl;
-                        return (-8);
+                        return (-10);
                     }
 
                     // CLIENT MESSAGE PARSING TO IMPLEMENT HERE

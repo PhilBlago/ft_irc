@@ -17,7 +17,7 @@
 
 #define SA          struct sockaddr_in
 
-#define MAX_BUFFER  1024
+#define MAX_BUFFER  512
 #define MAX_EVENTS  5
 
 #define SERV_PWD    "irc123"
